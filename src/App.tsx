@@ -1,25 +1,34 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import MainStyle from "../src/modules/Styles/MainStyles.module.css";
+import Services from './modules/Lists/serv';
+import Offer from './modules/Lists/Offer';
+import About from './modules/Lists/AboutUs';
+import Document from './modules/Lists/Document';
+import Clients from './modules/Lists/Clinets';
+import News from './modules/Lists/News';
+import Fran from './modules/Lists/Fran';
+import Contacts from './modules/Lists/Contacts';
+import NavBar from './modules/Lists/NavBar';
+import { Link } from 'react-router-dom';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+ <>
+   <div className= {MainStyle.BackGroundC}>
+        
+   </div>
+    <NavBar/>
+    <Services/>
+    <Offer/>
+    <About/>
+    <Document/>
+    <Clients/>
+    <News/>
+    <Fran/>
+    <Contacts/>
+    <Link data-testid = "LinkTest" to = "/test"/>
+ </>
   );
 }
 

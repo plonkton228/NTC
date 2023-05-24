@@ -1,0 +1,102 @@
+.head {
+    background-color: #1A2027;
+    padding: 40px 20px;
+}
+
+.burger{
+    position :relative;
+    width: 25px;
+    height: 1px;
+    background-color: white;
+
+}
+
+.hovBurger{
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    top: 28px;
+}
+
+.NavBar{
+    z-index: -10;
+    position: fixed;
+    height: 100%;
+
+    max-width: 0;
+    width: 100%;
+    left: 0;
+    background-color: #1A2027;
+    transition: all 0.3s linear;
+
+
+}
+
+.Container {
+ padding-top: 40px;
+ padding-left: 20px;
+ padding-right: 20px;
+ transition: all 0.3s linear;
+}
+.InnerContainer{
+    height: 600px;
+    border-radius: 10px;
+    border : 1px solid #1A2027;
+    background-color: #ededf0;
+}
+
+.Container.Open{
+    transition: all 0.3s linear;
+    padding-left: 334px;
+}
+
+.NavBar.Open{
+   
+    max-width: 314px;
+}
+
+.burger::after{
+    content: "";
+
+    position: absolute;
+    top: 8px;
+    left: 0;
+
+    width: 25px;
+    height: 1px;
+    background-color: white;
+
+    transition: all 0.3s linear ;
+
+}
+
+.burger::before{
+    content: "";
+
+    position: absolute;
+    top: -8px;
+    left: 0;
+    
+    width: 25px;
+    height: 1px;
+    background-color: white;
+
+    transition: all 0.3s linear ;
+
+}
+
+.burger.Open::after{
+    top: 0;
+    transform: rotateZ(45deg);
+
+}
+
+.burger.Open::before{
+    top: 0;
+    transform: rotateZ(-45deg);
+
+}
+.burger.Open{
+    background-color: transparent;
+
+}
