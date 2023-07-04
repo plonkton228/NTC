@@ -1,0 +1,21 @@
+.container{
+    max-width: 1540px;
+    width: 100%;
+
+    margin: 0 auto;
+  
+
+    background: rgba(255, 255, 255, 0.75);
+    
+    padding-top: 136px;
+
+    overflow: hidden;
+
+    text-align: center;
+
+
+}
+
+.h1dec {
+    font-size: 27px;
+}

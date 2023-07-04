@@ -1,0 +1,55 @@
+.container{
+    max-width: 1540px;
+    width: 100%;
+
+    margin: 0 auto;
+  
+
+    background: rgba(255, 255, 255, 0.75);
+    
+    padding-top: 136px;
+
+    overflow: hidden;
+
+    text-align: center;
+
+
+}
+
+.innerContact{
+    display: flex;
+
+    max-width: 1230px;
+    width: 100%;
+
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0 auto;
+
+}
+
+
+
+.cardC{
+    max-width: 700px;
+    max-height: 516px;
+}
+.contactC{
+  
+
+
+    color: #3366FF;
+    font-size: 27px;
+
+    margin-left: 20px;
+
+}
+
+.imgD{
+   margin-right : 25px
+
+}
+.h1dec {
+    font-size: 27px;
+}

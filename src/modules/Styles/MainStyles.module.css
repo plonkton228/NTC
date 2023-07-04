@@ -1,0 +1,35 @@
+.BackGroundC{
+    width: 100%;
+    height: 100vh;
+
+    position: fixed;
+    background-image: url('../Images/Back/Back.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+
+    z-index: -1000;
+    padding-top: 136px;
+}
+
+
+.container{
+    max-width: 1540px;
+    width: 100%;
+
+    margin: 0 auto;
+    padding-left: 10px;
+    padding-right: 10px;
+
+}
+
+
+
+
+
+@media(max-width: 1130px) {
+   .container{
+    display:none;
+   }
+}
