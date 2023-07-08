@@ -1,0 +1,170 @@
+.head {
+    position: fixed;
+    background-color: #1A2027;
+    padding: 40px 20px;
+
+    width: 100%;
+    z-index: 1000;
+}
+
+.burger{
+    position :relative;
+    width: 25px;
+    height: 1px;
+    background-color: white;
+
+}
+
+.hovBurger{
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    top: 28px;
+}
+
+.NavBar{
+    z-index: -10;
+    position: fixed;
+    height: 100%;
+
+    max-width: 0;
+    width: 100%;
+    left: 0;
+    background-color: #1A2027;
+    transition: all 0.3s linear;
+
+
+}
+
+.Container {
+ padding-top: 80px;
+ padding-left: 20px;
+ padding-right: 20px;
+ padding-bottom: 30px;
+ transition: all 0.3s linear;
+}
+.InnerContainer{
+    height: 600px;
+    border-radius: 10px;
+    border : 1px solid #1A2027;
+    background-color: #ededf0;
+}
+
+.divButton {
+    display: flex;
+
+    width: 100%;
+
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.containerCreate {
+    
+
+    min-width: 100%;
+    height: 100vh;
+
+    margin: 0 auto;
+    padding: 10px;
+
+   
+
+    background-color: lightgray
+}
+.innerCreate{
+    
+
+   
+    text-align: center;
+
+
+    max-width: 800px;
+    width: 100%;
+
+    max-height: 600px;
+    height: 100%;
+    margin: 0 auto;
+    
+
+
+
+    border: 1px solid #9b9fa3;
+
+    background-color: white;
+
+    padding: 10px
+
+    
+}
+
+.inputX{
+    width : 100%;
+
+    margin-top: 10px !important;
+    margin-bottom: 10px !important;
+}
+
+.inputContainer {
+    display: flex;
+    
+    width: 100%;
+
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.Container.Open{
+    transition: all 0.3s linear;
+    padding-left: 334px;
+}
+
+.NavBar.Open{
+   
+    max-width: 314px;
+}
+
+.burger::after{
+    content: "";
+
+    position: absolute;
+    top: 8px;
+    left: 0;
+
+    width: 25px;
+    height: 1px;
+    background-color: white;
+
+    transition: all 0.3s linear ;
+
+}
+
+.burger::before{
+    content: "";
+
+    position: absolute;
+    top: -8px;
+    left: 0;
+    
+    width: 25px;
+    height: 1px;
+    background-color: white;
+
+    transition: all 0.3s linear ;
+
+}
+
+.burger.Open::after{
+    top: 0;
+    transform: rotateZ(45deg);
+
+}
+
+.burger.Open::before{
+    top: 0;
+    transform: rotateZ(-45deg);
+
+}
+.burger.Open{
+    background-color: transparent;
+
+}
