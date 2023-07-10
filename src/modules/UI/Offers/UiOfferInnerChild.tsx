@@ -8,6 +8,8 @@ import axios from 'axios'
 import { OfferChildType } from "../../Types/OfferType";
 import NavBar from "../../Lists/NavBar";
 import { useAppSelector } from "../../../hooks/redux";
+import { FromType } from "../../Types/FormType";
+import { APIForm } from "../../../Helpers/APIForm";
 const UiOfferInnerChild: React.FC = ()=> {
     const id = useParams();
     const navigate = useNavigate();
@@ -15,7 +17,9 @@ const UiOfferInnerChild: React.FC = ()=> {
     const [Offers, setOffer] = useState<OfferChildType | null>(
        null
     );
+    const [form, setForm] = useState<FromType>({email: "", name : "", secondname: "surname"});
     const [heigth, setHeight] = useState<string>()
+    const API = new APIForm();
    useEffect(()=> {
     loadFunction()
     if(window.innerWidth <= 1000){
@@ -77,18 +81,18 @@ const UiOfferInnerChild: React.FC = ()=> {
                     </div>
                 
               <div style = {{marginTop: "20px"}}>
-                <div style={{display: "flex", alignItems: "center"}}>
-                 <span id= {ServicesStyle.p1} style={{maxWidth: "80px", width : "100%", fontSize: `${size}px`}}>Телефон:</span>
-                 <input className= {ServicesStyle.inputs}/>
+              <div style={{display: "flex", alignItems: "center"}}>
+                 <span id= {ServicesStyle.p1} style={{maxWidth: "80px", width : "100%", fontSize: `${size}px`}}>Name:</span>
+                 <input value={form.name} onChange={(e)=> setForm({...form ,name : e.target.value})} className= {ServicesStyle.inputs}/>
                 </div>
                 <div style={{display: "flex", alignItems: "center",marginTop: "25px"}}>
                  <span  id= {ServicesStyle.p1} style={{maxWidth: "80px", width : "100%", fontSize: `${size}px`}}>Email:</span>
-                 <input className= {ServicesStyle.inputs}/>
+                 <input value={form.email}  onChange={(e)=> setForm({...form ,email : e.target.value})} className= {ServicesStyle.inputs}/>
                 </div>
               </div>
               <p  id= {ServicesStyle.p2} style={{marginTop : "20px" , fontSize: `${size}px`}}>Нажимая на кнопку “Оставить заявку”, я даю согласие на обработку персональных данных и соглашаюсь с Политикой конфиденциальности</p>
               <div className= {ServicesStyle.buttonContainer}>
-               <button className= {ServicesStyle.buttonStyle}>Отправить заявку!</button>
+               <button className= {ServicesStyle.buttonStyle} onClick={()=> API.requestForm(form)}>Отправить заявку!</button>
               </div>
               
                 </div>

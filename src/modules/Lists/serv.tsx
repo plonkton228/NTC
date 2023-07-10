@@ -2,8 +2,13 @@ import ServicesStyle from '../Styles/ServiceStyles.module.css';
 import img  from '../Images/Services/Vec.png'
 import img1 from '../Images/Services/Galka.png'
 import { useAppSelector } from '../../hooks/redux';
+import { useState } from 'react';
+import { FromType } from '../Types/FormType';
+import { APIForm } from '../../Helpers/APIForm';
 const Services: React.FC = ()=> {
     const {sizeP, marginTop, size} = useAppSelector(state => state.visuallyReducer)
+    const [form, setForm] = useState<FromType>({email: "", name : "", secondname: "surname"});
+    const API = new APIForm();
  return (<>
      <div id = "section1" style={{paddingTop : `${marginTop}px`}} className= {ServicesStyle.container}>
         <div style={{paddingLeft : "40px", paddingRight: "40px"}}>
@@ -53,17 +58,17 @@ const Services: React.FC = ()=> {
                 
               <div style = {{marginTop: "20px"}}>
                 <div style={{display: "flex", alignItems: "center"}}>
-                 <span id= {ServicesStyle.p1} style={{maxWidth: "80px", width : "100%", fontSize: `${size}px`}}>Телефон:</span>
-                 <input className= {ServicesStyle.inputs}/>
+                 <span id= {ServicesStyle.p1} style={{maxWidth: "80px", width : "100%", fontSize: `${size}px`}}>Name:</span>
+                 <input value={form.name} onChange={(e)=> setForm({...form ,name : e.target.value})} className= {ServicesStyle.inputs}/>
                 </div>
                 <div style={{display: "flex", alignItems: "center",marginTop: "25px"}}>
                  <span  id= {ServicesStyle.p1} style={{maxWidth: "80px", width : "100%", fontSize: `${size}px`}}>Email:</span>
-                 <input className= {ServicesStyle.inputs}/>
+                 <input value={form.email}  onChange={(e)=> setForm({...form ,email : e.target.value})} className= {ServicesStyle.inputs}/>
                 </div>
               </div>
               <p  id= {ServicesStyle.p2} style={{marginTop : "20px" , fontSize: `${size}px`}}>Нажимая на кнопку “Оставить заявку”, я даю согласие на обработку персональных данных и соглашаюсь с Политикой конфиденциальности</p>
               <div className= {ServicesStyle.buttonContainer}>
-               <button className= {ServicesStyle.buttonStyle}>Отправить заявку!</button>
+               <button className= {ServicesStyle.buttonStyle} onClick={()=> API.requestForm(form)}>Отправить заявку!</button>
               </div>
               
                 </div>
