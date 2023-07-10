@@ -2,8 +2,11 @@ import ServicesStyle from '../Styles/ServiceStyles.module.css';
 import img  from '../Images/Services/Vec.png'
 import img1 from '../Images/Services/Galka.png'
 import { useAppSelector } from '../../hooks/redux';
+import { useState } from 'react';
+import { FromType } from '../Types/FormType';
 const Services: React.FC = ()=> {
     const {sizeP, marginTop, size} = useAppSelector(state => state.visuallyReducer)
+    const [form, setForm] = useState<FromType>({email: "", name : "", secondname: ""});
  return (<>
      <div id = "section1" style={{paddingTop : `${marginTop}px`}} className= {ServicesStyle.container}>
         <div style={{paddingLeft : "40px", paddingRight: "40px"}}>
