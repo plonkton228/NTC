@@ -18,7 +18,7 @@ const Auto : React.FC = ()=> {
             <h1 className= {AutoStyle.h1c}>Авторизация</h1>
             <div>
              <input className= {AutoStyle.inputCustom} value={user?.username} onChange={(e)=> setUser({...user,username : e.target.value})} placeholder="Логин"></input>
-             <input className= {AutoStyle.inputCustom} value={user?.password} onChange={(e)=> setUser(({...user, password:e.target.value}))} placeholder="Пароль"></input>
+             <input type = "password" className= {AutoStyle.inputCustom} value={user?.password} onChange={(e)=> setUser(({...user, password:e.target.value}))} placeholder="Пароль"></input>
             </div>
             <button className= {AutoStyle.btnAuto} onClick={()=> Autorez()}>Авторизироваться</button>
         </div>
