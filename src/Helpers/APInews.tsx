@@ -24,7 +24,7 @@ export class APINews {
 
    async editNews(id : string | undefined , news : updateNews){
     try {
-        await this.instance.patch<updateNews>(`/${id}/edit`, news);
+        await this.instance.patch<updateNews>(`/news/${id}/edit`, news);
     } catch (error) {
         return String(error)
     }
@@ -41,7 +41,7 @@ export class APINews {
 
    async deleteNews(id : string | undefined){
     try {
-        await this.instance.delete(`/${id}`)
+        await this.instance.delete(`/news/${id}`)
     } catch (error) {
         return String(error)
     }
