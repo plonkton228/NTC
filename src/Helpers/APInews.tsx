@@ -50,7 +50,7 @@ export class APINews {
 
    async addNews(news : innerNews) {
     try {
-        await this.instance.post('/create', news);
+        await this.instance.post('/news/create', news);
     } catch (error) {
         return String(error)
     }
