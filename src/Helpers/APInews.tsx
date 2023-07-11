@@ -5,7 +5,7 @@ import Cookies from "js-cookie";
 export class APINews {
     constructor(){
        this.instance = axios.create({
-        baseURL: 'http://localhost:8080/news' || process.env.REACT_APP_API_URL,
+        baseURL: '' || process.env.REACT_APP_API_URL,
         headers :{
             Authorization : `Bearer ${Cookies.get('token')}`
           }

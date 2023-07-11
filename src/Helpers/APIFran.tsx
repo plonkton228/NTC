@@ -8,7 +8,7 @@ import { FranType } from "../modules/Types/FranType";
 export class APIFran {
     constructor(){
        this.instance = axios.create({
-        baseURL: 'http://localhost:8080' || process.env.REACT_APP_API_URL,
+        baseURL: '' || process.env.REACT_APP_API_URL,
         headers :{
           Authorization : `Bearer ${Cookies.get('token')}`
         }

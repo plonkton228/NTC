@@ -9,7 +9,7 @@ console.log(process.env.REACT_APP_API_URL)
 export class APIAbout {
     constructor(){
        this.instance = axios.create({
-        baseURL: 'http://localhost:8080' ||  process.env.REACT_APP_API_URL,
+        baseURL: '' ||  process.env.REACT_APP_API_URL,
         headers :{
           Authorization : `Bearer ${Cookies.get('token')}`
         }
