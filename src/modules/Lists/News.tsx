@@ -9,21 +9,32 @@ import { Carousel } from 'react-responsive-carousel';
 import '../Styles/NewsStyleOut.css';
 const News : React.FC = ()=> {
   const [news , setNews] = useState<NewsType>();
+  const [centerSlidePercentage, setcenterSlidePercentage] = useState<number>(40);
   const [width, setWidth] = useState<number>(1560);
   const API = new APINews();
   const load = async()=> {
       const response = await API.getNews();
-      setNews(response);
+      if(response){
+        setNews(response);    
+      } 
   }
   useEffect(()=> {
    load()
+ 
   }, [])
+
+  useEffect(()=> {
+    if(news?.content){
+      news.content.length === 2 ? setcenterSlidePercentage(50) : news.content.length  >= 3 ? setcenterSlidePercentage(33) : setcenterSlidePercentage(100)
+    } 
+   }, [news])
   window.addEventListener( "load", (e)=> {
     setWidth(window.innerWidth)
 })
   window.addEventListener( "resize", (e)=> {
       setWidth(window.innerWidth)
   })
+
     return(<>
        <div id = "section6" className= {NewsStyle.container}>
          <h1 className='some'>НОВОСТИ</h1>
@@ -31,10 +42,10 @@ const News : React.FC = ()=> {
          <Carousel 
          showIndicators = {false}
          emulateTouch = {true}
-         infiniteLoop = {true}
          showThumbs = {false}
+          infiniteLoop = {true}
          centerMode = {true}
-         centerSlidePercentage={ width < 1000 ? 100 : 33}
+         centerSlidePercentage={ width < 1000 ? 100 : centerSlidePercentage}
          >
           {
             news?.content.map((element, index)=> <InnerCarouselNews key={element.id} title= {element.title} text= {element.text} author= {element.author}/>)
