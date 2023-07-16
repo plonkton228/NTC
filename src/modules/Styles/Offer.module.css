@@ -1,0 +1,185 @@
+.container{
+    max-width: 1540px;
+    width: 100%;
+    
+
+    margin: 0 auto;
+  
+
+    background: rgba(255, 255, 255, 0.75);
+    
+    padding-top: 146px;
+
+
+
+    text-align: center;
+
+    overflow: hidden;
+
+
+}
+.innerOffer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    margin: 0 auto;
+}
+
+.offercont{
+  display: flex;
+  
+  max-width: 688px;
+  width: 100%;
+  padding: 15px;
+  margin-top: 15px;
+
+
+  border: 1px solid #3366FF;
+  border-radius: 10px;
+
+  text-align: start;
+  
+
+  justify-content: space-between;
+  flex-direction: column;
+
+}
+.childOfferC{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+
+    max-width: 1490px;
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    font-size: 23px;
+    font-weight: 500;
+}
+.childOffer{
+    
+
+    max-width: 460px;
+    
+    width: 100%;
+
+
+    text-align: center;
+    padding-top: 60px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+
+    padding-bottom: 60px;
+   
+
+
+    border : 1px solid #3366FF;
+
+}
+
+#h1id{
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.dec{
+    display: flex;
+
+    padding-left: 10px;
+
+    margin-top: 10px;
+}
+
+.decbutton{
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid #3366FF;
+    height: 60px;
+
+    margin-top: 10px;
+
+    background-color: rgba(255, 255, 255, 0.75);
+
+    transition: all 0.3s linear;
+    justify-self: end;
+
+}
+
+.flexContainer{
+ display: flex;
+ justify-content: space-between;
+ flex-wrap: wrap;
+}
+
+
+.infoDiv{
+    display: flex;
+
+    margin: 10px 0;
+}
+#p1{
+    margin-left: 10px;
+    text-align: start;
+}
+
+#img1 {
+    align-self: center;
+    max-height: "16px";
+    
+}
+
+.decbutton:hover{
+    border: 3px solid black;
+    transition: all 0.5s linear;
+}
+
+
+.offerArrow{
+    width: 5px;
+    height: 5px;
+
+    border-left : 3px solid #B0C4DE;
+    border-bottom : 3px solid #B0C4DE;
+
+    transform: rotate(45deg);
+
+    
+}
+
+
+.h1dec {
+    font-size: 27px;
+}
+
+@media(max-width : 1540px){
+   
+    .innerOffer{
+        
+        justify-content: center;
+    
+        
+    }
+   
+}
+
+@media(max-width: 1200px){
+    .flexContainer{
+        justify-content: center;
+    }
+}
+
+@media(max-width: 1000px){
+    .container{
+   
+        
+        padding-top: 70px;
+    
+    
+    
+    
+    
+    }
+}

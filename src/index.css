@@ -1,0 +1,39 @@
+@font-face {
+  font-family: 'Normalidad Medium Var';
+  src: url('../fonts/NormalidadCompact-Medium.eot');
+  src: local('Normalidad Medium Var'), local('NormalidadCompact-Medium'),
+      url('../fonts/NormalidadCompact-Medium.eot') format('embedded-opentype'),
+      url('../fonts/NormalidadCompact-Medium.woff2') format('woff2'),
+      url('../fonts/NormalidadCompact-Medium.woff') format('woff'),
+      url('../fonts/NormalidadCompact-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+body {
+  margin: 0;
+  font-family: 'Normalidad Medium Var';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+img{
+  max-width: 100%;
+  max-height: 80px;
+}
+
+p {
+  margin: 0;
+ 
+}
+
+li {
+  list-style-type: none
+}
+
