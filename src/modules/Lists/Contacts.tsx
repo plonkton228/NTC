@@ -5,11 +5,11 @@ import contact3 from '../Images/Contacts/Contact3.png';
 import contact4 from '../Images/Contacts/Contact4.png';
 import { useEffect, useState } from 'react';
 const Contacts: React.FC = ()=> {
-  const [width , setWidth] = useState<number>();
+  const [width , setWidth] = useState<number>(540);
  window.addEventListener('resize', ()=> {
     if(window.innerWidth <= 1000){
       setWidth(310)
-    }else {
+    }if (window.innerWidth > 1000) {
       setWidth(540)
     }
  })
