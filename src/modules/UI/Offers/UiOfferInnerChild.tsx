@@ -31,7 +31,7 @@ const UiOfferInnerChild: React.FC = ()=> {
 
   const  loadFunction = async ()=> {
     try {
-    const response = await  axios.get<OfferChildType>(`http://localhost:8080/assistance/subassistance/${id.id}`)
+    const response = await  axios.get<OfferChildType>(process.env.REACT_APP_API_URL + `/assistance/subassistance/${id.id}`)
      setOffer(response.data)
     } catch (error) {
       
