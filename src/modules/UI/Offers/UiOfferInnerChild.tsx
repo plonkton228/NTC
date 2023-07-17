@@ -82,7 +82,7 @@ const UiOfferInnerChild: React.FC = ()=> {
                 
               <div style = {{marginTop: "20px"}}>
               <div style={{display: "flex", alignItems: "center"}}>
-                 <span id= {ServicesStyle.p1} style={{maxWidth: "80px", width : "100%", fontSize: `${size}px`}}>fio:</span>
+                 <span id= {ServicesStyle.p1} style={{maxWidth: "80px", width : "100%", fontSize: `${size}px`}}>ФИО:</span>
                  <input value={form.fio} onChange={(e)=> setForm({...form ,fio : e.target.value})} className= {ServicesStyle.inputs}/>
                 </div>
                 <div style={{display: "flex", alignItems: "center",marginTop: "25px"}}>
