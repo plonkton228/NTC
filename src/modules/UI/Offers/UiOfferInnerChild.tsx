@@ -51,7 +51,7 @@ const UiOfferInnerChild: React.FC = ()=> {
      <div className= {MainStyle.BackGroundC}>
         
     </div>
-    <div style={{height : `100${heigth}`}} className= {stylesOffer.container}>
+    <div style={{paddingBottom : "40px"}} className= {stylesOffer.container}>
         <div style = {{paddingLeft: "40px", paddingRight: "40px",textAlign: 'center', paddingTop : `${paddingTopInner}px`}}>
         <div onClick={()=> navigate(-1)} style={{display: "flex", alignItems : "center"}}>
             <div className= {stylesOffer.offerArrow}></div>
@@ -82,7 +82,7 @@ const UiOfferInnerChild: React.FC = ()=> {
                 
               <div style = {{marginTop: "20px"}}>
               <div style={{display: "flex", alignItems: "center"}}>
-                 <span id= {ServicesStyle.p1} style={{maxWidth: "80px", width : "100%", fontSize: `${size}px`}}>Name:</span>
+                 <span id= {ServicesStyle.p1} style={{maxWidth: "80px", width : "100%", fontSize: `${size}px`}}>fio:</span>
                  <input value={form.name} onChange={(e)=> setForm({...form ,name : e.target.value})} className= {ServicesStyle.inputs}/>
                 </div>
                 <div style={{display: "flex", alignItems: "center",marginTop: "25px"}}>

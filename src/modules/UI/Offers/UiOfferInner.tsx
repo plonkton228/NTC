@@ -6,6 +6,7 @@ import MainStyle from '../../Styles/MainStyles.module.css'
 import axios from "axios";
 import { OfferType } from "../../Types/OfferType";
 import NavBar from "../../Lists/NavBar";import { useAppSelector } from "../../../hooks/redux";
+import { APIOffer } from "../../../Helpers/APIoffer";
 
 interface  templateOfferInner {
   
@@ -47,7 +48,8 @@ const UiOfferInner: React.FC<templateOfferInner> = ()=> {
       }, [])
       const loadFunction = async ()=> {
             try {
-              const response =   await axios.get<OfferType>(`http://localhost:8080/assistance/${id.id}`)
+        
+              const response =   await axios.get<OfferType>(process.env.REACT_APP_API_URL + `/assistance/${id.id}`)
                 setOffer(response.data)
              
               
@@ -81,7 +83,7 @@ const UiOfferInner: React.FC<templateOfferInner> = ()=> {
           {
             Offers ? 
            Offers.assistanceTasks.map((item,index)=> <div key = {index} data-testid = "offer" style={{display: "flex" , marginTop: "15px"}}> <img alt="" id = {stylesOffer.img1} src = {play}/> <p style={{fontSize: `${sizeP}px`}}  id = {stylesOffer.p1} >{item}</p> </div>   ) :
-            <div data-testid = "Load">Загрузка!!!</div>
+            <div data-testid = "Load">Загрузка!</div>
           }
           <div className= {stylesOffer.childOfferC}>
              {

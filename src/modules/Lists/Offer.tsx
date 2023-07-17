@@ -32,7 +32,7 @@ const loadFunction = async ()=> {
           {
             Offers ? 
             Offers.map((item)=> <UiOffer  key={item.id} id = {item.id} header= {item.name} arr = {item.assistanceTasks} navigate={navigate} /> ) :
-            <div data-testid = "LoadDiv"> Загрузкааааа!</div>
+            <div data-testid = "LoadDiv"> Загрузка!</div>
           }
         
        </div>
