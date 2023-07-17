@@ -17,7 +17,7 @@ const UiOfferInnerChild: React.FC = ()=> {
     const [Offers, setOffer] = useState<OfferChildType | null>(
        null
     );
-    const [form, setForm] = useState<FromType>({email: "", name : "", secondname: "surname"});
+    const [form, setForm] = useState<FromType>({email: "", fio : ""});
     const [heigth, setHeight] = useState<string>()
     const API = new APIForm();
    useEffect(()=> {
@@ -83,7 +83,7 @@ const UiOfferInnerChild: React.FC = ()=> {
               <div style = {{marginTop: "20px"}}>
               <div style={{display: "flex", alignItems: "center"}}>
                  <span id= {ServicesStyle.p1} style={{maxWidth: "80px", width : "100%", fontSize: `${size}px`}}>fio:</span>
-                 <input value={form.name} onChange={(e)=> setForm({...form ,name : e.target.value})} className= {ServicesStyle.inputs}/>
+                 <input value={form.fio} onChange={(e)=> setForm({...form ,fio : e.target.value})} className= {ServicesStyle.inputs}/>
                 </div>
                 <div style={{display: "flex", alignItems: "center",marginTop: "25px"}}>
                  <span  id= {ServicesStyle.p1} style={{maxWidth: "80px", width : "100%", fontSize: `${size}px`}}>Email:</span>

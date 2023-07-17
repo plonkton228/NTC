@@ -7,7 +7,7 @@ import { FromType } from '../Types/FormType';
 import { APIForm } from '../../Helpers/APIForm';
 const Services: React.FC = ()=> {
     const {sizeP, marginTop, size} = useAppSelector(state => state.visuallyReducer)
-    const [form, setForm] = useState<FromType>({email: "", name : "", secondname: "surname"});
+    const [form, setForm] = useState<FromType>({email: "", fio : ""});
     const API = new APIForm();
  return (<>
      <div id = "section1" style={{paddingTop : `${marginTop}px`}} className= {ServicesStyle.container}>
@@ -58,8 +58,8 @@ const Services: React.FC = ()=> {
                 
               <div style = {{marginTop: "20px"}}>
                 <div style={{display: "flex", alignItems: "center"}}>
-                 <span id= {ServicesStyle.p1} style={{maxWidth: "80px", width : "100%", fontSize: `${size}px`}}>fio:</span>
-                 <input value={form.name} onChange={(e)=> setForm({...form ,name : e.target.value})} className= {ServicesStyle.inputs}/>
+                 <span id= {ServicesStyle.p1} style={{maxWidth: "80px", width : "100%", fontSize: `${size}px`}}>ФИО:</span>
+                 <input value={form.fio} onChange={(e)=> setForm({...form ,fio : e.target.value})} className= {ServicesStyle.inputs}/>
                 </div>
                 <div style={{display: "flex", alignItems: "center",marginTop: "25px"}}>
                  <span  id= {ServicesStyle.p1} style={{maxWidth: "80px", width : "100%", fontSize: `${size}px`}}>Email:</span>
